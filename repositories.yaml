@@ -1,2 +1,35 @@
 repositories:
-
+  - qedgardo/private-notes
+  - qedgardo/useful-scripts
+  - qedgardo/synq
+  - asymetric-research/solana-exporter
+  - monad-developers/staking-sdk-cli
+  - monad-developers/validator-info
+  - AnykeyNL/OCI-SuperDelete
+  - quiknode-labs/role_base
+  - quiknode-labs/role_iris_agent
+  - quiknode-labs/slack-unfurlers
+  - quiknode-labs/iris
+  - quiknode-labs/raas-remote-signer
+  - quiknode-labs/infra-tf
+  - quiknode-labs/iris_definitions
+  - quiknode-labs/chain-k8s-apps
+  - quiknode-labs/validator-info
+  - quiknode-labs/rollups
+  - quiknode-labs/role_edge
+  - quiknode-labs/role_solana
+  - quiknode-labs/qn-k8s
+  - quiknode-labs/infra-k8s-apps
+  - quiknode-labs/nitro-contracts-custom-chain
+  - quiknode-labs/rollup-ops-suite
+  - quiknode-labs/solana-validator-monitoring
+  - quiknode-labs/qn-chain-chart-scaffolder
+  - quiknode-labs/helm-charts
+  - spaceandtimefdn/sxt-node
+  - offchainlabs/community-helm-charts
+  - offchainlabs/bkp
+  - offchainlabs/nitro-contracts
+  - offchainlabs/arbitrum-orbit-sdk
+  - offchainlabs/arbitrum-token-bridge
+  - offchainlabs/orbit-setup-script
+  - offchainlabs/arbitrum-orbit-deployment-ui
