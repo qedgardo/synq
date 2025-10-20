@@ -6,24 +6,39 @@ repositories:
   - monad-developers/staking-sdk-cli
   - monad-developers/validator-info
   - AnykeyNL/OCI-SuperDelete
+  - quiknode-labs/role_strk
+  - quiknode-labs/blockwatcher
   - quiknode-labs/role_base
+  - quiknode-labs/role_flare_docker
+  - quiknode-labs/role_vector
   - quiknode-labs/role_iris_agent
   - quiknode-labs/slack-unfurlers
   - quiknode-labs/iris
+  - quiknode-labs/role_docker_security_baseline
+  - quiknode-labs/role-patch-node
+  - quiknode-labs/role_chain_build
+  - quiknode-labs/role_op_docker
+  - quiknode-labs/role_utils
   - quiknode-labs/raas-remote-signer
   - quiknode-labs/infra-tf
   - quiknode-labs/iris_definitions
+  - quiknode-labs/role_arb_docker
+  - quiknode-labs/role_version_exporter
   - quiknode-labs/chain-k8s-apps
   - quiknode-labs/validator-info
   - quiknode-labs/rollups
   - quiknode-labs/role_edge
   - quiknode-labs/role_solana
   - quiknode-labs/qn-k8s
+  - quiknode-labs/role_cosmovisor_docker
   - quiknode-labs/infra-k8s-apps
   - quiknode-labs/nitro-contracts-custom-chain
   - quiknode-labs/rollup-ops-suite
+  - quiknode-labs/role_monad
   - quiknode-labs/solana-validator-monitoring
+  - quiknode-labs/role_bera_docker
   - quiknode-labs/qn-chain-chart-scaffolder
+  - quiknode-labs/role_docker
   - quiknode-labs/helm-charts
   - spaceandtimefdn/sxt-node
   - offchainlabs/community-helm-charts
