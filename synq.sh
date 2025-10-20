@@ -3,6 +3,17 @@
 # Get the mode
 MODE=$1
 
+# Resolve script directory and self-update from git if possible
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -d "$SCRIPT_DIR/.git" ]; then
+    echo "Updating synq repository (self-update)..."
+    if git -C "$SCRIPT_DIR" pull --ff-only; then
+        echo "Self-update complete."
+    else
+        echo "Self-update failed (continuing with current version)."
+    fi
+fi
+
 # Default location for repositories
 DEFAULT_LOCATION="$HOME/Documents/code/github.com"
 REPOSITORIES_FILE="repositories.yaml"
@@ -63,6 +74,25 @@ push_mode() {
     # Count total repositories added
     local total_repos=$(grep -c "  - " "$REPOSITORIES_FILE" 2>/dev/null || echo "0")
     echo "Added $total_repos repositories"
+
+    # If running inside a git repo, commit and push the updated inventory
+    local script_dir="$(cd "$(dirname "$0")" && pwd)"
+    if [ -d "$script_dir/.git" ]; then
+        echo "Committing updated $REPOSITORIES_FILE to git..."
+        (
+            cd "$script_dir" || exit 0
+            git add "$REPOSITORIES_FILE"
+            if ! git diff --cached --quiet; then
+                local now
+                now=$(date '+%Y-%m-%d %H:%M:%S')
+                git commit -m "$now sync"
+                git push
+                echo "Changes committed and pushed."
+            else
+                echo "No changes to commit."
+            fi
+        )
+    fi
 }
 
 # Function to implement pull mode
@@ -84,6 +114,7 @@ pull_mode() {
     fi
     
     local cloned_count=0
+    local pulled_count=0
     local skipped_count=0
     
     # Read repositories from YAML file and clone each one
@@ -100,8 +131,18 @@ pull_mode() {
         
         # Check if repository already exists
         if [ -d "$full_path" ]; then
-            echo "  ✓ Repository already exists, skipping: $repo_path"
-            skipped_count=$((skipped_count + 1))
+            if [ -d "$full_path/.git" ]; then
+                echo "  ⤵️  Pulling latest changes in: $repo_path"
+                if git -C "$full_path" pull --ff-only; then
+                    echo "  ✓ Successfully pulled: $repo_path"
+                    pulled_count=$((pulled_count + 1))
+                else
+                    echo "  ✗ Failed to pull: $repo_path"
+                fi
+            else
+                echo "  ! Directory exists but is not a git repository, skipping: $repo_path"
+                skipped_count=$((skipped_count + 1))
+            fi
         else
             echo "  📥 Cloning: $git_url"
             if git clone "$git_url" "$full_path" 2>/dev/null; then
@@ -114,9 +155,10 @@ pull_mode() {
     done
     
     echo ""
-    echo "Clone operation completed!"
+    echo "Pull operation completed!"
     echo "Cloned: $cloned_count repositories"
-    echo "Skipped: $skipped_count repositories (already exist)"
+    echo "Pulled: $pulled_count repositories"
+    echo "Skipped: $skipped_count directories (non-git)"
 }
 
 # Main script logic
