@@ -3,20 +3,30 @@ repositories:
   - qedgardo/useful-scripts
   - qedgardo/synq
   - asymetric-research/solana-exporter
+  - flare-foundation/flare-smart-contracts-v2
+  - avitaltamir/cyphernetes
+  - nicolaka/netshoot
+  - jpetazzo/container.training
+  - jpetazzo/dessine-moi-un-cluster
   - monad-developers/staking-sdk-cli
   - monad-developers/validator-info
   - AnykeyNL/OCI-SuperDelete
+  - quiknode-labs/role_matic_docker
   - quiknode-labs/role_strk
+  - quiknode-labs/role_near
   - quiknode-labs/blockwatcher
   - quiknode-labs/role_base
   - quiknode-labs/role_flare_docker
   - quiknode-labs/role_vector
   - quiknode-labs/role_iris_agent
+  - quiknode-labs/role_patch_node
   - quiknode-labs/slack-unfurlers
   - quiknode-labs/iris
+  - quiknode-labs/role-flow
   - quiknode-labs/role_docker_security_baseline
   - quiknode-labs/role-patch-node
   - quiknode-labs/role_chain_build
+  - quiknode-labs/magicsync
   - quiknode-labs/role_op_docker
   - quiknode-labs/role_utils
   - quiknode-labs/raas-remote-signer
@@ -30,12 +40,15 @@ repositories:
   - quiknode-labs/role_edge
   - quiknode-labs/role_solana
   - quiknode-labs/qn-k8s
+  - quiknode-labs/role_eth_docker
   - quiknode-labs/role_cosmovisor_docker
   - quiknode-labs/infra-k8s-apps
   - quiknode-labs/nitro-contracts-custom-chain
   - quiknode-labs/rollup-ops-suite
+  - quiknode-labs/consul-discovery
   - quiknode-labs/role_monad
   - quiknode-labs/solana-validator-monitoring
+  - quiknode-labs/gcp-module-tf
   - quiknode-labs/role_bera_docker
   - quiknode-labs/qn-chain-chart-scaffolder
   - quiknode-labs/role_docker
