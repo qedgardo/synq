@@ -1,6 +1,5 @@
 repositories:
   - qedgardo/private-notes
-  - qedgardo/useful-scripts
   - qedgardo/synq
   - asymetric-research/solana-exporter
   - flare-foundation/flare-smart-contracts-v2
@@ -15,12 +14,15 @@ repositories:
   - quiknode-labs/role_strk
   - quiknode-labs/role_near
   - quiknode-labs/blockwatcher
+  - quiknode-labs/role_validators
+  - quiknode-labs/evmbench
   - quiknode-labs/role_base
   - quiknode-labs/role_flare_docker
   - quiknode-labs/role_vector
   - quiknode-labs/role_iris_agent
   - quiknode-labs/role_patch_node
   - quiknode-labs/slack-unfurlers
+  - quiknode-labs/role_joc_docker
   - quiknode-labs/iris
   - quiknode-labs/role-flow
   - quiknode-labs/role_docker_security_baseline
@@ -30,6 +32,7 @@ repositories:
   - quiknode-labs/role_op_docker
   - quiknode-labs/role_utils
   - quiknode-labs/raas-remote-signer
+  - quiknode-labs/image_bakery
   - quiknode-labs/infra-tf
   - quiknode-labs/iris_definitions
   - quiknode-labs/role_arb_docker
@@ -52,6 +55,7 @@ repositories:
   - quiknode-labs/role_bera_docker
   - quiknode-labs/qn-chain-chart-scaffolder
   - quiknode-labs/role_docker
+  - quiknode-labs/role_story
   - quiknode-labs/helm-charts
   - spaceandtimefdn/sxt-node
   - offchainlabs/community-helm-charts
